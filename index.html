@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Planetarium | Explore the Milky Way</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="theme-toggle">
+            <button id="theme-btn" aria-label="Toggle Light and Dark Mode">Switch to Light Mode</button>
+        </div>
+        <nav aria-label="Primary Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mercury.html">Mercury</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="earth.html">Earth</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptune.html">Neptune</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="nasa-eyes">
+            <h2>Interactive Solar System</h2>
+            <p>Explore the galaxy in real-time with NASA's 3D simulation.</p>
+
+            <div class="iframe-container">
+                <iframe src="https://eyes.nasa.gov/apps/solar-system/#/home"
+                    title="NASA Eyes on the Solar System - Interactive 3D Simulation" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <section id="hero">
+            <p>Based in Bristol, we bring the wonders of space to everyone!</p>
+            <div class="video-container">
+                <iframe src="Videos\Solar System 101 National Geographic.mp4"
+                    title="YouTube video player: Solar System" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="interaction-demo">
+            <h2>Fast Fact</h2>
+            <p id="fact-text">Click the button below to learn a quick space fact!</p>
+            <button id="fact-btn">Show Fact</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Big Planetarium Bristol</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

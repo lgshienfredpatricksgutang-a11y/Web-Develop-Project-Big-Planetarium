@@ -1,0 +1,160 @@
+/* this is the root CSS variables for the dark theme */
+/* the root selector uses CSS variables to define the color scheme for the website, 
+including background color, text color, accent color, and navigation background. 
+These variables allow for easy theming and maintenance of the site's design. 
+The body and header styles set the overall look and feel of the website,
+ while the navigation styles ensure a user-friendly interface.
+  The media query at the end ensures that the layout is responsive on smaller screens. 
+  Additionally, there are styles for light mode that can be toggled using JavaScript to enhance accessibility and user experience. */
+:root {
+    --bg-color: #05070a;
+    --text-color: #ffffff;
+    --accent-color: #f1c40f;
+    --nav-bg: #161b22;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 10px;
+}
+
+/* Keyboard Navigation Visibility  */
+nav a:focus,
+nav a:hover {
+    outline: 3px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.active {
+    border-bottom: 3px solid var(--accent-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+img,
+.video-container {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Container to maintain aspect ratio */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 2px solid #f1c40f;
+    border-radius: 12px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+        padding: 12px;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Light Mode Theme */
+body.light-mode {
+    --bg-color: #f4f4f9;
+    --text-color: #1a1a2e;
+    --nav-bg: #e0e0e5;
+}
+
+body.light-mode header {
+    border-bottom: 2px solid #2980b9;
+    /* Change accent color for light mode if desired */
+}
+
+body.light-mode nav a {
+    color: #1a1a2e;
+}
+
+/* Style for the toggle button itself */
+.theme-toggle {
+    text-align: right;
+    padding: 10px;
+}
+
+#theme-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: var(--accent-color);
+    color: black;
+    border-radius: 20px;
+}
